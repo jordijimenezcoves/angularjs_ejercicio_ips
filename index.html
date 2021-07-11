@@ -4,7 +4,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Detectando IPs</title>
 
-
         <!-- Incluir Bootstrap -->
         <link rel="stylesheet" href="css/bootstrap.min.css">
 
@@ -24,11 +23,18 @@
             <h1>Detectar IPs</h1>
             <h4>Manejo de recursos online</h4>
             <hr>
+
+            ip: {{ geo.geoplugin_request }}
+            <br>
+            país: {{ geo.geoplugin_countryName }}
+            <br>
+            Moneda: {{ geo.geoplugin_currencySymbol_UTF8 }}
             
-        
+            <br><br>
 
-
-
+            <pre>
+                {{ geo | json }}
+            </pre>
 
         </div><!-- fin del listadoCtrl -->
 
